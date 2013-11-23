@@ -15,7 +15,8 @@ html lang="en"
       ul class="title-area"
         li class="name"
           h1
-            = link_to "SLOcations", root_url
+            = link_to root_url do
+              = image_tag("slocationlogo.png")
       section class="top-bar-section"
         ul class="right"
           - unless user_signed_in?
