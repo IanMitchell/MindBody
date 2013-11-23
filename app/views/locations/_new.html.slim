@@ -2,23 +2,31 @@ div(id="new_location" class="reveal-modal" data-reveal)
   h2 Add SLOcation
 
   = form_for(@new_location, remote: true) do |f|
-    p
-      = f.label :name
-      = f.text_field :name
+    div class="row"
+      div class="small-12 medium-5 large-6 columns"
+        p
+          = f.label :name
+          = f.text_field :name
 
-    p
-      = f.label :url
-      = f.text_field :url
+      div class="small-12 medium-5 large-6 columns"
+        p
+          = f.label :url
+          = f.text_field :url
 
-    p
-      = f.label :image
-      = f.file_field :image
+    div class="row"
+      div class="small-12 medium-5 large-6 columns"
+        p
+          = f.label :image
+          = f.file_field :image
 
-    p
-      = f.label :tag_tokens, "Tags"
-      = f.text_field :tag_tokens
+      div class="small-12 medium-5 large-6 columns"
+        p
+          = f.label :tag_tokens, "Tags"
+          = f.text_field :tag_tokens
 
-    p
-      = f.submit
+    div class="row"
+      div class="small-1 medium-1 large-1 small-centered medium-centered large-centered columns"
+        p
+          = f.button
 
   a class="close-reveal-modal" &#215;
