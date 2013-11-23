@@ -6,6 +6,8 @@ class Location < ActiveRecord::Base
   mount_uploader :image, LocationImageUploader
 
 
+  validates :image, :presence => true
+
   validates :name,  :presence => true,
                     :length => { :minimum => 3, :maximum => 75 }
 

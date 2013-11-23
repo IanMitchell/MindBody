@@ -35,7 +35,7 @@
 // $total-columns: 12;
 
 // We use these to control various global styles
-$body-bg: #fff;
+//$body-bg: #fff;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -50,7 +50,7 @@ $body-bg: #fff;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #fff;
+//$primary-color: #fff;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -201,7 +201,7 @@ $primary-color: #fff;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
-$button-group-border-width: 0;
+//$button-group-border-width: 0;
 
 // Clearing
 
@@ -925,7 +925,9 @@ $button-group-border-width: 0;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $body-bg;
+// $topbar-bg-color: #eee;
+// $topbar-link-color: #000;
+// $topbar-bg: $topbar-bg-color;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -947,13 +949,13 @@ $topbar-bg-color: $body-bg;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #000;
-$topbar-link-color-hover: #000;
+//$topbar-link-color: #000;
+//$topbar-link-color-hover: #000;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: normal;
 // $topbar-link-font-size: rem-calc(13);
-$topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #eee;
+//$topbar-link-hover-lightness: -10%; // Darken by 10%
+//$topbar-link-bg-hover: #eee;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: darken($primary-color, 5%);
 // $topbar-link-font-family: $body-font-family;

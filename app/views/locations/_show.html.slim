@@ -1,9 +1,17 @@
-div class="small-3 medium-3 large-3 columns"
-  /- unless location.image.nil?
-    /img src="#{location.image}"
+div class="small-12 medium-6 large-3 columns"
+  div class="location"
 
-  h5= location.name
+    - unless location.image.nil?
+      img src="#{location.image}"
 
-  ul
-    - location.tags.each do |tag|
-      li id="tag-#{tag.id}"= tag.name
+    - unless location.url.nil?
+      = link_to location.url do
+        i class="fi-link location-link"
+
+    h5= location.name
+
+
+    div class="location-tags-container"
+      - location.tags.each do |tag|
+        span class="location-tag"
+          = link_to tag.name, root_url + "?utf8=✓&query=" + tag.name
