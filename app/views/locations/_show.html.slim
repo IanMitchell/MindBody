@@ -5,7 +5,7 @@ div class="small-12 medium-6 large-3 columns layout-target"
       img src="#{location.image}"
 
     - unless location.url.nil?
-      = link_to location.url do
+      = link_to location.url, target: "_blank" do
         i class="fi-link location-link"
 
     h5= location.name
