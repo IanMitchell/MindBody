@@ -25,6 +25,8 @@ html lang="en"
               = link_to "Register", new_user_registration_path
           - else
             li
+              a href="#" data-reveal-id="new_location" Add Location
+            li
               = link_to "Account", edit_user_registration_path
             li
               = link_to "Logout", destroy_user_session_path
@@ -34,3 +36,8 @@ html lang="en"
 
     = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true
+
+
+    = render 'locations/new' if user_signed_in?
+
+    /<a href="#" data-reveal-id="id"></a>
