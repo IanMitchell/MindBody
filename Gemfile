@@ -22,6 +22,8 @@ gem 'devise', '>= 3.0.0'
 # Uploads
 gem 'carrierwave'
 
+# Search
+gem 'searchkick'
 
 # API
 gem 'jbuilder', '~> 1.2'
