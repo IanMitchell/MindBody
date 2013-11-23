@@ -6,7 +6,19 @@ div class="row"
       /i class="fi-magnifying-glass"
       = button_tag "", class: "fi-magnifying-glass left inline"
 
-p Debug:
-ul
-- @tags.each do |tag|
-  li= tag.name
+  h5 Locations:
+  ul class="square"
+    - unless @locations.nil?
+      - @locations.each do |loc|
+        li= loc.name
+
+  h5 Tags
+  ul class="disc"
+    - unless @tags.nil?
+      - @tags.each do |tag|
+        li
+          = tag.name
+          h6 Tag Locations:
+          ul class="disc"
+            - tag.locations.each do |loc|
+              li= loc.name
