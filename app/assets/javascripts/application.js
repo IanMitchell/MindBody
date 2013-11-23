@@ -17,6 +17,7 @@
 //= require typeahead
 //= require jquery.tokeninput
 //= require jquery.remotipart
+//= require wookmark
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
