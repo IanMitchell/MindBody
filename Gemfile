@@ -29,3 +29,7 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   gem 'sdoc', require: false
 end
+
+group :development do
+  gem 'letter_opener'
+end
