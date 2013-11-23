@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123020203) do
+ActiveRecord::Schema.define(version: 20131123022515) do
 
   create_table "locations", force: true do |t|
     t.string   "name"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20131123020203) do
   end
 
   add_index "locations", ["user_id"], name: "index_locations_on_user_id"
+
+  create_table "locations_tags", force: true do |t|
+    t.integer "location_id", null: false
+    t.integer "tag_id",      null: false
+  end
+
+  add_index "locations_tags", ["location_id", "tag_id"], name: "index_locations_tags_on_location_id_and_tag_id", unique: true
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
