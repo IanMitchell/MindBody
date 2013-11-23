@@ -9,6 +9,12 @@ class HomeController < ApplicationController
   end
 
   def autocomplete
-    render json: Tag.search(params[:query], autocomplete: true, limit: 10).map(&:name)
+    results = Array.new
+    results = Location.search(params[:query], autocomplete: true, limit: 3).map(&:name)
+    Tag.search(params[:query], autocomplete: true, limit: 7).map(&:name).each do |str|
+      results << str
+    end
+
+    render json: results
   end
 end
