@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require typeahead
 //= require jquery.tokeninput
+//= require jquery.remotipart
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

@@ -23,6 +23,7 @@ gem 'devise', '>= 3.0.0'
 
 # Uploads
 gem 'carrierwave'
+gem 'remotipart'
 
 # Search
 gem 'searchkick'

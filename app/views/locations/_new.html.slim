@@ -1,5 +1,5 @@
 div(id="new_location" class="reveal-modal" data-reveal)
-  h2 New Location
+  h2 Add SLOcation
 
   = form_for(@new_location, remote: true) do |f|
     p
@@ -7,8 +7,8 @@ div(id="new_location" class="reveal-modal" data-reveal)
       = f.text_field :name
 
     p
-      = f.label :file
-      = f.file_field :file
+      = f.label :image
+      = f.file_field :image
 
     p
       = f.label :tag_tokens, "Tags"
