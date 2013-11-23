@@ -14,6 +14,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+# Accounts
+gem 'devise', '>= 3.0.0'
+
 
 # API
 gem 'jbuilder', '~> 1.2'
