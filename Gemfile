@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 gem 'sqlite3'
 
+# Bad, but we have limited time
+gem 'protected_attributes'
 
 # Design
 gem 'slim'
@@ -21,6 +23,7 @@ gem 'devise', '>= 3.0.0'
 
 # Uploads
 gem 'carrierwave'
+gem 'remotipart'
 
 # Search
 gem 'searchkick'
@@ -34,4 +37,6 @@ end
 
 group :development do
   gem 'letter_opener'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end

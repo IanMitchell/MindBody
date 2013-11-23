@@ -1,10 +1,14 @@
 class HomeController < ApplicationController
-  # TODO: Search Logic
   def index
     if params[:query].present?
-      @tags = Tag.search(params[:query])
+      @locations = Location.search params[:query], partial: true
+      @tags = Tag.search params[:query], partial: true
     else
-      @tags = Tag.all
+      @locations = Location.all
     end
+  end
+
+  def autocomplete
+    render json: Tag.search(params[:query], autocomplete: true, limit: 10).map(&:name)
   end
 end

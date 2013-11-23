@@ -6,6 +6,8 @@ div class="row"
       /i class="fi-magnifying-glass"
       = button_tag "", class: "fi-magnifying-glass"
 
-ul
-- @tags.each do |tag|
-  li= tag.name
+  - unless @locations.nil?
+    = render partial: "locations/show", collection: @locations, as: :location
+  - unless @tags.nil?
+    - @tags.each do |tag|
+      = render partial: "locations/show", collection: tag.locations, as: :location

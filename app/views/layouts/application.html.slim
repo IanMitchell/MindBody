@@ -4,7 +4,7 @@ html lang="en"
     meta charset="utf-8" /
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    title= content_for?(:title) ? yield(:title) : "Mind Body Hackathon"
+    title= content_for?(:title) ? yield(:title) : "SLOcations"
 
     = stylesheet_link_tag    "application", "data-turbolinks-track" => true
     = javascript_include_tag "vendor/modernizr"
@@ -14,9 +14,8 @@ html lang="en"
     nav class="top-bar" data-options="is_hover: false"
       ul class="title-area"
         li class="name"
-      ul class="left"
-          button class="fi-home"
-            = link_to "", root_url
+          h1
+            = link_to "SLOcations", root_url
       section class="top-bar-section"
         ul class="right"
           - unless user_signed_in?
@@ -26,6 +25,8 @@ html lang="en"
               = link_to "Register", new_user_registration_path
           - else
             li
+              a href="#" data-reveal-id="new_location" Add SLOcation
+            li
               = link_to "Account", edit_user_registration_path
             li
               = link_to "Logout", destroy_user_session_path
@@ -34,4 +35,6 @@ html lang="en"
     p class="alert"= alert
 
     = yield
+
+    = render 'locations/new' if user_signed_in?
     = javascript_include_tag "application", "data-turbolinks-track" => true

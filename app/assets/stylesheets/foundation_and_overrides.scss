@@ -332,13 +332,13 @@ $button-group-border-width: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(20);
-$input-bg-color: transparent;
-$input-border-color: transparent;
-$input-focus-bg-color: none;
-$input-include-glowing-effect: false;
-$input-focus-border-color: transparent;
-$input-box-shadow: 0;
-$input-border: none;
+//$input-bg-color: transparent;
+//$input-border-color: transparent;
+//$input-focus-bg-color: none;
+//$input-include-glowing-effect: false;
+//$input-focus-border-color: transparent;
+//$input-box-shadow: 0;
+//$input-border: none;
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
@@ -354,9 +354,9 @@ $input-border: none;
 
 // We use these to style the prefix and postfix input elements
 // $input-prefix-bg: darken(#fff, 5%);
-$input-prefix-border-color: transparent;
-$input-prefix-border-size: 0px;
-$input-prefix-border-type: none;
+//$input-prefix-border-color: transparent;
+//$input-prefix-border-size: 0px;
+//$input-prefix-border-type: none;
 // $input-prefix-overflow: hidden;
 // $input-prefix-font-color: #333;
 // $input-prefix-font-color-alt: #fff;
@@ -371,8 +371,8 @@ $input-prefix-border-type: none;
 // $input-error-message-font-color-alt: #333;
 
 // We use this to style the glowing effect of inputs when focused
-$glowing-effect-fade-time: 0.45s;
-$glowing-effect-color: none;
+//$glowing-effect-fade-time: 0.45s;
+//$glowing-effect-color: none;
 
 // Select variables
 // $select-bg-color: #fafafa  ;
