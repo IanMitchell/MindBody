@@ -17,6 +17,9 @@ gem 'turbolinks'
 # Accounts
 gem 'devise', '>= 3.0.0'
 
+# Uploads
+gem 'carrierwave'
+
 
 # API
 gem 'jbuilder', '~> 1.2'
