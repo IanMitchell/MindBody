@@ -1,0 +1,8 @@
+div
+  img src="#{@location.image}"
+  h5= location.name
+
+  ul
+    - @location.tags.each do |tag|
+      li id="tag-#{tag.id}"= tag.name
+

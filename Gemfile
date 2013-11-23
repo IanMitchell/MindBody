@@ -22,10 +22,16 @@ gem 'devise', '>= 3.0.0'
 # Uploads
 gem 'carrierwave'
 
+# Search
+gem 'searchkick'
 
 # API
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'letter_opener'
 end
