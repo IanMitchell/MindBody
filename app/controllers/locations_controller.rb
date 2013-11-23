@@ -17,11 +17,11 @@ class LocationsController < ApplicationController
   # TODO?
   def create
     if user_signed_in?
-      @location = Location.new(params[:location])
-      @location.user = current_user
-      @location.save
+      @new_location = Location.new(params[:location])
+      @new_location.user = current_user
+      @new_location.save
 
-      respond_with @location
+      respond_with @new_location
     end
   end
 

@@ -12,7 +12,7 @@ class Location < ActiveRecord::Base
                     :length => { :minimum => 3, :maximum => 75 }
 
   attr_reader :tag_tokens
-  attr_accessible :name, :tag_tokens, :image
+  attr_accessible :name, :tag_tokens, :image, :url
 
   def tag_tokens=(tokens)
     self.tag_ids = Tag.ids_from_tokens(tokens)

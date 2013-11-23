@@ -3,6 +3,11 @@ div(id="new_location" class="reveal-modal" data-reveal)
 
   = form_for(@new_location, remote: true) do |f|
     div class="row"
+      div class="small-12 medium-12 large-12 columns"
+        div id="new-location-errors"
+          = f.error_messages
+
+    div class="row"
       div class="small-12 medium-5 large-6 columns"
         p
           = f.label :name
