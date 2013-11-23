@@ -11,11 +11,12 @@ html lang="en"
     = csrf_meta_tags
 
   body
-    nav class="top-bar"
+    nav class="top-bar" data-options="is_hover: false"
       ul class="title-area"
         li class="name"
-          h1
-            = link_to "Mindbody Hackathon", root_url
+      ul class="left"
+          button class="fi-home"
+            = link_to "", root_url
       section class="top-bar-section"
         ul class="right"
           - unless user_signed_in?

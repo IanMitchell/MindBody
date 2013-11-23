@@ -1,12 +1,11 @@
 div class="row"
   = form_tag root_path, method: :get do
-    div class="small-11 medium-11 large-11 columns"
+    div class="small-9 medium-8 large-10 columns"
       = search_field_tag :query, params[:query], id: "searchbox"
-    div class="small-1 medium-1 large-1 columns"
+    div class="small-3 medium-2 large-1 columns"
       /i class="fi-magnifying-glass"
-      = button_tag "", class: "fi-magnifying-glass left inline"
+      = button_tag "", class: "fi-magnifying-glass"
 
-p Debug:
 ul
 - @tags.each do |tag|
   li= tag.name
