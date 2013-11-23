@@ -1,4 +1,5 @@
 $ ->
+  $('#searchbox').focus
   $('#searchbox').typeahead
-    name: "tag"
+    name: "location"
     remote: "/autocomplete?query=%QUERY"
