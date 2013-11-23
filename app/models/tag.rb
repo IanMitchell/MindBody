@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  searchkick
+  searchkick autocomplete: ['name']
 
   has_and_belongs_to_many :locations
 

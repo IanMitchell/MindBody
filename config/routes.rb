@@ -1,6 +1,9 @@
 MindBody::Application.routes.draw do
+  # TODO: Limit Location Routes
   resources :locations
   devise_for :users
+
+  get '/autocomplete' => 'home#autocomplete'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
