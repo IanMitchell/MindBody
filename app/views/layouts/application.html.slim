@@ -35,9 +35,6 @@ html lang="en"
     p class="alert"= alert
 
     = yield
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-
 
     = render 'locations/new' if user_signed_in?
-
-    /<a href="#" data-reveal-id="id"></a>
+    = javascript_include_tag "application", "data-turbolinks-track" => true

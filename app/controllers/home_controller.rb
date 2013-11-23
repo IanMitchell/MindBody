@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    @new_location = Location.new
+
     if params[:query].present?
       @locations = Location.search params[:query], partial: true
       @tags = Tag.search params[:query], partial: true

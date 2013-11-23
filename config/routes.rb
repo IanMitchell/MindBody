@@ -3,7 +3,9 @@ MindBody::Application.routes.draw do
   resources :locations
   devise_for :users
 
+  get '/tags' => 'tags#index'
   get '/autocomplete' => 'home#autocomplete'
+
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  respond_to :html, :js
+
   # TODO
   def index
   end
@@ -6,11 +8,6 @@ class LocationsController < ApplicationController
   # TODO?
   def show
     @location = Location.find(params[:id])
-  end
-
-  # TODO?
-  def new
-    @location = Location.new
   end
 
   def edit

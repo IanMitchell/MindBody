@@ -15,6 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require typeahead
+//= require jquery.tokeninput
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

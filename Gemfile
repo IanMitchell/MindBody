@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 gem 'sqlite3'
 
+# Bad, but we have limited time
+gem 'protected_attributes'
 
 # Design
 gem 'slim'
