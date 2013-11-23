@@ -3,22 +3,11 @@ div class="row"
     div class="small-11 medium-11 large-11 columns"
       = search_field_tag :query, params[:query], id: "searchbox"
     div class="small-1 medium-1 large-1 columns"
-      /i class="fi-magnifying-glass"
       = button_tag "", class: "fi-magnifying-glass left inline"
 
-  h5 Locations:
-  ul class="square"
-    - unless @locations.nil?
-      - @locations.each do |loc|
-        li= loc.name
 
-  h5 Tags
-  ul class="disc"
-    - unless @tags.nil?
-      - @tags.each do |tag|
-        li
-          = tag.name
-          h6 Tag Locations:
-          ul class="disc"
-            - tag.locations.each do |loc|
-              li= loc.name
+  - unless @locations.nil?
+    = render partial: "locations/show", collection: @locations, as: :location
+  - unless @tags.nil?
+    - @tags.each do |tag|
+      = render partial: "locations/show", collection: tag.locations, as: :location
